@@ -1,0 +1,35 @@
+
+<!-- html and jinja for testing the trust network crawling -->
+
+{% extends "evalapp/header.html" %}
+
+{% block content %}
+
+<div>Test the crawling of trust network:
+	<div>
+	---------------------------
+	</div>
+	<div>
+	
+	</div>
+	<div>
+	{{ user }} is requesting a trust aggregation calculation
+	</div>
+	<div>
+	results:
+	</div>
+	<div>
+	{{ users_evaluations }}
+	</div>
+	<div>
+	AND ESTIMATES:
+	</div>
+	<div>
+	{{estimates}}
+	</div>
+	<div>
+	
+	</div>
+</div>
+
+{% endblock %}

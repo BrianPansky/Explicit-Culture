@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Eval List</h1>
+  {% if appliedeval_list %}
+  <ul>
+    {% for eval in appliedeval_list %}
+	    {% if eval.appliedBy == user %}
+          <li>
+            <a href="{% url 'vieweval' eval.pk %}">{{ eval }}</a>
+          </li>
+		{% endif %}  
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no appliedEvals to display.</p>
+	why
+  {% endif %}       
+{% endblock %}

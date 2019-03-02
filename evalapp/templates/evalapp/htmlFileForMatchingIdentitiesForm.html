@@ -1,0 +1,18 @@
+
+<!-- html and jinja for matching identities -->
+
+{% extends "evalapp/header.html" %}
+
+{% block content %}
+
+
+<div>Match Identities
+	<form action="" method="post">
+		{% csrf_token %}
+		<table>
+			{{ form.as_table }}
+		</table>
+		<input type="submit" value="Submit">
+	</form>
+</div>
+{% endblock %}

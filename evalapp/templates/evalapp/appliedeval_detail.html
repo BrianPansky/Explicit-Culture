@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+	{% if user == 'correctUser' %}
+		<h1>Title: {{ appliedeval }}</h1>
+
+		<p><strong>typeApplied:</strong> {{ appliedeval.typeApplied }}</p>
+		<p><strong>appliedTo:</strong> {{ appliedeval.appliedTo }}</p> 
+		<p><strong>evaluation:</strong> {{ appliedeval.evaluation }}</p>  
+		<p><strong>appliedBy:</strong> {{appliedeval.appliedBy }}</p> 
+		
+	{% else %}
+	you are not authorized to see receive this info
+	{% endif %} 
+
+{% endblock %}
